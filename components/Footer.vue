@@ -115,9 +115,10 @@
           @click="toggleModal"
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          class="text-[#606060] font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+          class="text-[#606060] font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex gap-1 items-center"
           type="button"
         >
+          <img src="../store/img/flag/Property 1=US.png" alt="" class="w-[20px]">
           English
           <svg
             class="w-4 h-4 ml-2"
