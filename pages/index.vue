@@ -1,5 +1,9 @@
 <template>
-  <div class="container mx-auto px-20"></div>
+  <footer>
+    <div class="container mx-auto px-4">
+    
+    </div>
+  </footer>
 </template>
 
 <script setup></script>
