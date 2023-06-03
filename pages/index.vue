@@ -1,9 +1,5 @@
 <template>
-  <footer>
-    <div class="container mx-auto px-4">
-    
-    </div>
-  </footer>
+    <div class="container mx-auto border mt-36">sadsd</div>
 </template>
 
 <script setup></script>
