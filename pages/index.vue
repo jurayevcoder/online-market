@@ -274,7 +274,7 @@
     </div>
 
     <div
-      class="rounded-lg flex w-[100%] bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/Group982.png')] p-10 justify-between"
+      class="rounded-lg flex w-[100%] bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/Group982.png')] p-10 justify-between mb-5"
     >
       <div>
         <h3 class="text-[32px] text-white font-bold mb-5">
@@ -289,26 +289,133 @@
 
       <div class="bg-white rounded-lg w-[500px] p-5">
         <h3 class="text-[20px] font-normal mb-5">Send quote to suppliers</h3>
-        <input type="text" placeholder="What item you need?" class="outline-none border rounded-lg w-full p-2 mb-3"/>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Type more details" class="outline-none border p-2 rounded-lg w-full h-[73px] mb-2"></textarea>
-        <div class="flex items-center mb-5">
-          <input type="text" placeholder="Quantity" class="outline-none border rounded-lg p-2"/>
-
+        <input
+          type="text"
+          placeholder="What item you need?"
+          class="outline-none border rounded-lg w-full p-2 mb-3 placeholder-black"
+        />
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Type more details"
+          class="outline-none border p-2 rounded-lg w-full h-[73px] mb-2"
+        ></textarea>
+        <div class="relative flex items-center mb-5 gap-3">
+          <input
+            type="text"
+            placeholder="Quantity"
+            class="outline-none border rounded-lg p-2 placeholder-black"
+          />
+          <button
+            @click="toggleModal"
+            id="dropdownNavbarLink"
+            data-dropdown-toggle="dropdownNavbar"
+            class="flex items-center justify-between w-[100px] rounded border p-2"
+          >
+            Pcs
+            <svg
+              class="w-5 h-5 ml-1"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownNavbar"
+            :class="
+              modal
+                ? 'z-50 absolute font-normal bg-white rounded right-20 top-12 w-[100px]'
+                : 'hidden'
+            "
+          >
+            <ul class="py-2 text-sm text-gray-900" aria-labelledby="dropdownLargeButton">
+              <li>
+                <a href="#" class="block px-4 py-2">Nimadur</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2">Nimadur</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2">Nimadur</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <button class="bg-[rgba(18,127,255,1)] text-white rounded-lg border border-[rgba(18,127,255,1)] px-4 py-2 hover:bg-white hover:text-[rgba(18,127,255,1)]">
+        <button
+          class="bg-[rgba(18,127,255,1)] text-white rounded-lg border border-[rgba(18,127,255,1)] px-4 py-2 hover:bg-white hover:text-[rgba(18,127,255,1)]"
+        >
           Send inquiry
         </button>
+      </div>
+    </div>
+
+    <div class="w-[100%]">
+      <h1 class="text-[24px] font-semibold mb-5">Recommended items</h1>
+      <div class="w-[100%] flex flex-wrap gap-[1.5%]">
+        <div
+          v-for="item in recItemsLink"
+          :key="item.id"
+          class="border w-[18.8%] p-5 rounded-lg flex flex-col items-center mb-5"
+        >
+          <img :src="item.img" alt="" class="w-[150.22px] h-[170.67px] mb-[20px]" />
+          <div class="">
+            <h2 class="font-medium mb-[5px] ">{{ item.price }}</h2>
+            <p class="text-[#8B96A5] font-normal w-[186px]">{{ item.info }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[100%] mb-5">
+      <h1 class="text-[24px] font-semibold mb-5">Our extra services</h1>
+      <div class="w-[100%] flex gap-5">
+        <div v-for="ser in serviceLink" :key="ser.id" class="w-[25%] border rounded-lg relative">
+          <img :src="ser.img" alt="" class="w-full rounded-t-lg bg-[rgba(0,0,0,0.9)]">
+          <p class="font-medium my-5 ml-5 w-[168px]">
+            {{ ser.name }}
+          </p>
+          <button class="absolute right-8 top-[100px] bg-[#D1E7FF] p-5 flex items-center justify-center rounded-full text-[25px] border-2 border-white">
+            <i :class="ser.icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[100%]">
+      <h1 class="text-[24px] font-semibold mb-5">Suppliers by region</h1>
+      <div class="w-[100%] flex flex-wrap gap-4">
+          <div v-for="flag in flagLink" :key="flag.id" class="w-[18.9%] flex items-center gap-3">
+            <img :src="flag.img" alt="" class="w-[28px] h-[20px]">
+            <div>
+              <h2 class="font-normal">{{ flag.name }}</h2>
+              <p class="text-[13px] text-[#8B96A5] font-normal">{{ flag.info }}</p>
+            </div>
+          </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { offerLinks } from "~/store/info/offer";
 import { homeLinks_1 } from "~/store/info/home-1";
 import { homeLinks_2 } from "~/store/info/home-2";
 import { elecLinks_1 } from "~/store/info/electironic-1";
 import { elecLinks_2 } from "~/store/info/electironic-2";
+import { recItemsLinks } from "~/store/info/rec-items";
+import { serviceLinks } from "~/store/info/services";
+import { flagLinks } from "~/store/info/flag";
 
 const offerLink = ref(offerLinks);
 
@@ -317,6 +424,20 @@ const homeLink_2 = ref(homeLinks_2);
 
 const elecLink_1 = ref(elecLinks_1);
 const elecLink_2 = ref(elecLinks_2);
+
+const recItemsLink = ref(recItemsLinks);
+
+const serviceLink = ref(serviceLinks);
+
+const flagLink = ref(flagLinks);
+
+const modal = ref(false);
+const toggleModal = () => (modal.value = !modal.value);
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+body {
+  font-family: "Inter", sans-serif;
+  // font-family: "Roboto", sans-serif;
+}
+</style>
