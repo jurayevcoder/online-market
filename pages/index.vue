@@ -467,7 +467,7 @@
     </div>
   </div>
 
-  <div class="lg:hidden container mx-auto px-5 flex items-center justify-between mb-5">
+  <div class="lg:hidden container mx-auto px-5 flex items-center justify-between mb-3">
     <div class="">
       <h2 class="text-[18px] font-semibold">Deals and offers</h2>
       <p class="text-[13px] font-normal tex-[#505050]">Electronic equipments</p>
@@ -488,17 +488,19 @@
     </div>
   </div>
 
-  <div class="lg:hidden container mx-auto px-5 flex mb-5 items-center justify-between border py-5">
+  <div
+    class="lg:hidden container mx-auto px-5 flex mb-5 items-center justify-between border py-5"
+  >
     <button
       @click="back"
-      :class="0 == sch ? 'text-gray-200 text-[50px]' : 'text-gray-400 text-[50px]'"
+      :class="0 == sch ? 'text-gray-200 text-[40px]' : 'text-gray-400 text-[40px]'"
     >
       <i class="bx bxs-chevron-left-circle"></i>
     </button>
     <div class="w-full flex items-center justify-center">
       <div class="flex items-center w-[80%] gap-5">
         <div
-          class="flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+          class="flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
         >
           <div class="h-[120px]">
             <img :src="offerLink[sch].img" alt="" />
@@ -518,7 +520,7 @@
         </div>
 
         <div
-          class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+          class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
         >
           <div class="h-[120px]">
             <img :src="offerLink[sch + 1].img" alt="" class="" />
@@ -542,22 +544,24 @@
       @click="next"
       :class="
         offerLink.length - 2 == sch
-          ? 'text-gray-200 text-[50px]'
-          : 'text-gray-400 text-[50px]'
+          ? 'text-gray-200 text-[40px]'
+          : 'text-gray-400 text-[40px]'
       "
     >
       <i class="bx bxs-chevron-right-circle"></i>
     </button>
   </div>
 
-  <div class="lg:hidden">
-   <div class="container mx-auto px-5 mb-5">
-    <h1 class="text-[18px] font-semibold">Home and outdoor</h1>
-   </div>
-    <div class="container mx-auto px-5 flex mb-5 items-center justify-between border py-5">
+  <div class="lg:hidden mb-5">
+    <div class="container mx-auto px-5 mb-3">
+      <h1 class="text-[18px] font-semibold">Home and outdoor</h1>
+    </div>
+    <div
+      class="container mx-auto px-5 flex mb-5 items-center justify-between border py-5"
+    >
       <button
         @click="backHome"
-        :class="0 == id ? 'text-gray-200 text-[50px]' : 'text-gray-400 text-[50px]'"
+        :class="0 == id ? 'text-gray-200 text-[40px]' : 'text-gray-400 text-[40px]'"
       >
         <i class="bx bxs-chevron-left-circle"></i>
       </button>
@@ -565,10 +569,10 @@
       <div class="w-full flex items-center justify-center">
         <div class="flex items-center w-[80%] gap-5">
           <div
-            class="flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+            class="flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
           >
             <div class="h-[120px]">
-              <img :src="homeLink[id].img" alt="" class="w-28 h-28"/>
+              <img :src="homeLink[id].img" alt="" class="w-[98px] h-[103.23px]" />
             </div>
             <div class="flex flex-col items-center gap-2 mt-5">
               <a
@@ -576,19 +580,17 @@
                 class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
                 >{{ homeLink[id].name }}</a
               >
-              <p
-                class="text-[#8B96A5] text-[13px] font-normal"
-              >
+              <p class="text-[#8B96A5] text-[13px] font-normal">
                 {{ homeLink[id].price }}
               </p>
             </div>
           </div>
 
           <div
-            class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+            class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
           >
             <div class="h-[120px]">
-              <img :src="homeLink[id + 1].img" alt="" class="w-28 h-28" />
+              <img :src="homeLink[id + 1].img" alt="" class="w-[98px] h-[103.23px]" />
             </div>
             <div class="flex flex-col items-center gap-2 mt-5">
               <a
@@ -596,9 +598,7 @@
                 class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
                 >{{ homeLink[id + 1].name }}</a
               >
-              <p
-                class="text-[#8B96A5] text-[13px] font-normal"
-              >
+              <p class="text-[#8B96A5] text-[13px] font-normal">
                 {{ homeLink[id + 1].price }}
               </p>
             </div>
@@ -610,13 +610,116 @@
         @click="nextHome"
         :class="
           homeLink.length - 2 == id
-            ? 'text-gray-200 text-[50px]'
-            : 'text-gray-400 text-[50px]'
+            ? 'text-gray-200 text-[40px]'
+            : 'text-gray-400 text-[40px]'
         "
       >
         <i class="bx bxs-chevron-right-circle"></i>
       </button>
     </div>
+  </div>
+
+  <div class="lg:hidden mb-5">
+    <div class="container mx-auto px-5 mb-5">
+      <a class="text-[#0D6EFD] font-medium"
+        >Source now <i class="bx bx-right-arrow-alt"></i
+      ></a>
+    </div>
+    <div class="container mx-auto px-5 mb-3 border-t pt-5">
+      <h1 class="text-[18px] font-semibold">Consumer electronics</h1>
+    </div>
+
+    <div
+      class="container mx-auto px-5 flex mb-5 items-center justify-between border py-5"
+    >
+      <button
+        @click="backElec"
+        :class="0 == iD ? 'text-gray-200 text-[40px]' : 'text-gray-400 text-[40px]'"
+      >
+        <i class="bx bxs-chevron-left-circle"></i>
+      </button>
+
+      <div class="w-full flex items-center justify-center">
+        <div class="flex items-center w-[80%] gap-5">
+          <div
+            class="flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
+          >
+            <div class="h-[120px]">
+              <img :src="electronicLink[iD].img" alt="" class="w-[91.03px] h-[86.24px]" />
+            </div>
+            <div class="flex flex-col items-center gap-2 mt-5">
+              <a
+                href="#"
+                class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+                >{{ electronicLink[iD].name }}</a
+              >
+              <p class="text-[#8B96A5] text-[13px] font-normal">
+                {{ electronicLink[iD].price }}
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
+          >
+            <div class="h-[120px]">
+              <img :src="electronicLink[iD + 1].img" alt="" class="w-[91.03px] h-[86.24px]" />
+            </div>
+            <div class="flex flex-col items-center gap-2 mt-5">
+              <a
+                href="#"
+                class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+                >{{ electronicLink[iD + 1].name }}</a
+              >
+              <p class="text-[#8B96A5] text-[13px] font-normal">
+                {{ electronicLink[iD + 1].price }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        @click="nextElec"
+        :class="
+          electronicLink.length - 2 == iD
+            ? 'text-gray-200 text-[40px]'
+            : 'text-gray-400 text-[40px]'
+        "
+      >
+        <i class="bx bxs-chevron-right-circle"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5 pb-5 border-b">
+      <a class="text-[#0D6EFD] font-medium"
+        >Source now <i class="bx bx-right-arrow-alt"></i
+      ></a>
+  </div>
+
+  <div class="lg:hidden bg-no-repet bg-cover bg-center bg-[url('/store/img/img/Group982.png')] mb-5">
+    <div class="container mx-auto px-5 pt-10">
+      <h2 class="text-white font-semibold text-[18px] mb-8">An easy way to send <br> requests to all suppliers</h2>
+      <button class="bg-[rgba(18,127,255,1)] px-5 py-2 text-[13px] font-medium text-white rounded-lg mb-10">Send inquiry</button>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5">
+    <h2 class="tex-[18px] font-semibold mb-3">Recommended items</h2>
+    <div class="w-[100%] flex flex-wrap gap-[2%]">
+        <div
+          v-for="item in recItemsLink"
+          :key="item.id"
+          class="border w-[49%] sm:w-[32%] p-5 rounded-lg flex flex-col items-center mb-2 sm:mb-3.5 bg-white cursor-pointer gap-5"
+        >
+          <img :src="item.img" alt="" class="w-[107.58px] h-[122.22px]" />
+          <div class="">
+            <h2 class="font-medium text-[16px] mb-1">{{ item.price }}</h2>
+            <p class="text-[#8B96A5] text-[13px] font-normal w-[150px]">{{ item.info }}</p>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -631,6 +734,7 @@ import { recItemsLinks } from "~/store/info/rec-items";
 import { serviceLinks } from "~/store/info/services";
 import { flagLinks } from "~/store/info/flag";
 import {homeLinks} from "~/store/info/home"
+import {electronicLinks} from "~/store/info/electronic"
 
 const offerLink = ref(offerLinks);
 const sch = ref(0);
@@ -663,8 +767,25 @@ const backHome = () => {
   } else {
     id.value = id.value - 1;
   }
+}
+
+const iD = ref(0);
+const nextElec = () => {
+  if (iD.value == electronicLink.value.length - 1) {
+    iD.value = iD.value;
+  } else {
+    iD.value = iD.value + 1;
+  }
+};
+const backElec = () => {
+  if (iD.value == 0) {
+    iD.value = iD.value;
+  } else {
+    iD.value = iD.value - 1;
+  }
 };
 
+const electronicLink = ref(electronicLinks);
 const homeLink = ref(homeLinks)
 
 const homeLink_1 = ref(homeLinks_1);

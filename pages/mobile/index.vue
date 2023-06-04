@@ -357,7 +357,7 @@ const toggleShow = () => (show.value = !show.value);
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   body {
     background-color: #F7FAFC;
   }
