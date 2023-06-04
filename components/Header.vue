@@ -5,9 +5,9 @@
         <nav class="py-2.5">
           <div class="flex flex-wrap justify-between items-center">
             <div class="flex item-center justify-between gap-3">
-
               <div class="flex items-center lg:order-2 lg:hidden">
                 <button
+                @click="toggleModal"
                   data-collapse-toggle="mobile-menu-2"
                   type="button"
                   class="inline-flex items-center text-sm text-gray-500"
@@ -42,6 +42,55 @@
                 </button>
               </div>
 
+              <div class="lg:hidden ">
+                <div :class="modal ? 'absolute left-0 top-0 bg-white z-50 sm:w-[50%] w-[80%] h-[100vh] ' : 'hidden '">
+                  <button @click="toggleModal" class="absolute text-[30px] right-2 top-2 text-white"><i class='bx bx-x' ></i></button>
+                  <div class="pl-5 py-5 bg-[#EFF2F4]">
+                    <img src="../store/img/img/Avatar-2.png" alt=""  class=""/>
+                    <h1 class="font-normal mt-3"> <a href="#">Sign in</a> | <a href="#">Register</a></h1>
+                  </div>
+                  <ul>
+                    <li class="pl-5 py-3.5 flex items-center gap-4">
+                      <i class='bx bx-home text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">Home</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4">
+                      <i class='bx bx-list-ul text-[25px] text-[#8B96A5]'></i>
+                      <a href="#" class="font-normal">Categories</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4">
+                      <i class='bx bx-heart text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">Favorites</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4 border-b">
+                      <i class='bx bx-box text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">My orders</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4">
+                      <i class='bx bx-globe text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">English | USD</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4">
+                      <i class='bx bx-headphone text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">Contact us</a>
+                    </li>
+                    <li class="pl-5 py-3.5 flex items-center gap-4 border-b">
+                      <i class='bx bxs-business text-[25px] text-[#8B96A5]' ></i>
+                      <a href="#" class="font-normal">About</a>
+                    </li>
+                    <li class="pl-16 py-3.5 flex items-center gap-4">
+                      <a href="#" class="font-normal">User agreement</a>
+                    </li>
+                    <li class="pl-16 py-3.5 flex items-center gap-4">
+                      <a href="#" class="font-normal">Partnership</a>
+                    </li>
+                    <li class="pl-16 py-3.5 flex items-center gap-4">
+                      <a href="#" class="font-normal">Privacy policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <a href="/" class="flex items-center">
                 <img
                   src="../public/favicon.png"
@@ -53,17 +102,15 @@
                   >Brand</span
                 >
               </a>
-
             </div>
 
             <div class="flex item-center justify-between gap-3 lg:hidden">
-            <a href="#">
-              <img src="../store/img/icon/shopping_cart.svg" alt="">
-            </a>
-            <a href="#">
-            <img src="../store/img/icon/person.svg" alt="">
-            </a>
-
+              <a href="#">
+                <img src="../store/img/icon/shopping_cart.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../store/img/icon/person.svg" alt="" />
+              </a>
             </div>
 
             <form class="w-full lg:w-[50%] mt-3 lg:mt-0">
@@ -71,7 +118,7 @@
                 class="flex border-2 border-gray-300 lg:border-[rgba(18,127,255,1)] rounded-[12px] w-full"
               >
                 <div class="relative w-full flex items-center">
-                  <i class='bx bx-search ml-5 text-[20px] text-gray-400 lg:hidden'></i>
+                  <i class="bx bx-search ml-5 text-[20px] text-gray-400 lg:hidden"></i>
                   <input
                     type="search"
                     id="search-dropdown"
@@ -363,6 +410,9 @@ const toggleAll = () => (all.value = !all.value);
 
 const menu = ref(false);
 const toggleMenu = () => (menu.value = !menu.value);
+
+const modal = ref(false);
+const toggleModal = () => (modal.value = !modal.value);
 
 const english = ref(false);
 const toggleEnglish = () => (english.value = !english.value);
