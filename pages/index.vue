@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto px-5 py-5">
+  <div class="container mx-auto p-5">
     <div
-      class="mt-32 flex items-center justify-between gap-5 border border-[#DEE2E7] rounded-lg p-5 mb-5"
+      class="mt-32 flex items-center justify-between gap-5 border border-[#DEE2E7] rounded-lg p-5 mb-5 bg-white"
     >
       <div class="flex flex-col items-start w-[30%]">
         <button
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div class="flex border border-[#DEE2E7] rounded-lg mb-5">
+    <div class="flex border border-[#DEE2E7] rounded-lg mb-5 bg-white">
       <div class="px-5 py-6 w-[23%] border-r">
         <h1 class="text-[20px] text-[#1C1C1C] font-bold">Deals and offers</h1>
         <p class="text-[#8B96A5]">Hygiene equipments</p>
@@ -156,7 +156,7 @@
       </div>
     </div>
 
-    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5">
+    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5 bg-white">
       <div
         class="w-[23%] pt-5 pl-5 bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/image92.png')]"
       >
@@ -180,7 +180,7 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <h3>{{ home.name }}</h3>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ home.name }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -201,7 +201,7 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <h3>{{ hom.name }}</h3>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ hom.name }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -214,7 +214,7 @@
       </div>
     </div>
 
-    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5">
+    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5 bg-white">
       <div
         class="w-[23%] pt-5 pl-5 bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/image98.png')]"
       >
@@ -239,7 +239,7 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <h3>{{ elec.name }}</h3>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ elec.name }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -260,7 +260,7 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <h3>{{ elek.name }}</h3>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ elek.name }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -365,7 +365,7 @@
         <div
           v-for="item in recItemsLink"
           :key="item.id"
-          class="border w-[18.8%] p-5 rounded-lg flex flex-col items-center mb-5"
+          class="border w-[18.8%] p-5 rounded-lg flex flex-col items-center mb-5 bg-white cursor-pointer"
         >
           <img :src="item.img" alt="" class="w-[150.22px] h-[170.67px] mb-[20px]" />
           <div class="">
@@ -379,7 +379,7 @@
     <div class="w-[100%] mb-5">
       <h1 class="text-[24px] font-semibold mb-5">Our extra services</h1>
       <div class="w-[100%] flex gap-5">
-        <div v-for="ser in serviceLink" :key="ser.id" class="w-[25%] border rounded-lg relative">
+        <div v-for="ser in serviceLink" :key="ser.id" class="w-[25%] border rounded-lg relative bg-white">
           <img :src="ser.img" alt="" class="w-full rounded-t-lg bg-[rgba(0,0,0,0.9)]">
           <p class="font-medium my-5 ml-5 w-[168px]">
             {{ ser.name }}
@@ -403,6 +403,8 @@
           </div>
       </div>
     </div>
+
+
   </div>
 </template>
 
@@ -438,6 +440,7 @@ const toggleModal = () => (modal.value = !modal.value);
 <style lang="scss">
 body {
   font-family: "Inter", sans-serif;
+  background-color: #F7FAFC;
   // font-family: "Roboto", sans-serif;
 }
 </style>

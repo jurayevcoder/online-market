@@ -30,10 +30,10 @@
       <div class="container mx-auto px-5">
         <div class="flex items-center justify-between">
           <div class="flex flex-col justif-center gap-3">
-            <div class="flex items-center gap-2">
+            <a href="/" class="flex items-center gap-2">
               <img src="../public/favicon.png" alt="" />
               <h1 class="text-[#8CB7F5] text-2xl font-bold">Brand</h1>
-            </div>
+            </a>
             <p class="text-[#505050]">
               Best information about the company <br />
               gies here but now lorem ipsum is
