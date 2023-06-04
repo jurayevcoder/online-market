@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#EFF2F4] w-full">
+  <footer class="hidden lg:block bg-[#EFF2F4] w-full">
     <div class="bg-[#EFF2F4] w-full">
       <div class="container mx-auto px-5">
         <div class="flex flex-col items-center justify-center py-12">

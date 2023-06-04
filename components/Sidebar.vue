@@ -1,6 +1,6 @@
 <template>
   <aside>
-      <div class="">
+      <div class="bg-[#F7FAFC]">
         <ul class="mb-5">
           <li>
             <button

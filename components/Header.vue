@@ -3,66 +3,79 @@
     <div class="bg-white border-gray-200 border-b">
       <div class="container mx-auto px-5">
         <nav class="py-2.5">
-          <div
-            class="flex flex-wrap justify-between items-center"
-          >
-            <a href="/" class="flex items-center">
-              <img
-                src="../public/favicon.png"
-                class="mr-3 h-6 sm:h-9"
-                alt="Flowbite Logo"
-              />
-              <span
-                class="self-center text-xl font-semibold whitespace-nowrap text-[#8CB7F5]"
-                >Brand</span
-              >
-            </a>
+          <div class="flex flex-wrap justify-between items-center">
+            <div class="flex item-center justify-between gap-3">
 
-            <div class="flex items-center lg:order-2 lg:hidden">
-              <button
-                data-collapse-toggle="mobile-menu-2"
-                type="button"
-                class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                aria-controls="mobile-menu-2"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open main menu</span>
-                <svg
-                  class="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div class="flex items-center lg:order-2 lg:hidden">
+                <button
+                  data-collapse-toggle="mobile-menu-2"
+                  type="button"
+                  class="inline-flex items-center text-sm text-gray-500"
+                  aria-controls="mobile-menu-2"
+                  aria-expanded="false"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <svg
-                  class="hidden w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                  <span class="sr-only">Open main menu</span>
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="hidden w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <a href="/" class="flex items-center">
+                <img
+                  src="../public/favicon.png"
+                  class="mr-3 h-6 sm:h-9"
+                  alt="Flowbite Logo"
+                />
+                <span
+                  class="self-center text-xl font-semibold whitespace-nowrap text-[#8CB7F5]"
+                  >Brand</span
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+              </a>
+
             </div>
 
-            <form>
+            <div class="flex item-center justify-between gap-3 lg:hidden">
+            <a href="#">
+              <img src="../store/img/icon/shopping_cart.svg" alt="">
+            </a>
+            <a href="#">
+            <img src="../store/img/icon/person.svg" alt="">
+            </a>
+
+            </div>
+
+            <form class="w-full lg:w-[50%] mt-3 lg:mt-0">
               <div
-                class="flex border-2 border-[rgba(18,127,255,1)] rounded-[12px] w-[665px]"
+                class="flex border-2 border-gray-300 lg:border-[rgba(18,127,255,1)] rounded-[12px] w-full"
               >
                 <div class="relative w-full flex items-center">
+                  <i class='bx bx-search ml-5 text-[20px] text-gray-400 lg:hidden'></i>
                   <input
                     type="search"
                     id="search-dropdown"
-                    class="block p-2.5 w-full z-20 text-sm text-gray-900 rounded-l-[12px] bg-gray-50 outline-none"
+                    class="block py-2.5 pl-2 xl:p-2.5 w-full z-20 text-sm text-gray-900 md:rounded-l-[12px] rounded-[15px] lg:bg-[#F7FAFC] xl:bg-gray-50 outline-none"
                     placeholder="Search..."
                     required
                   />
@@ -70,7 +83,7 @@
                     @click="toggleAll"
                     id="dropdown-button"
                     data-dropdown-toggle="dropdown"
-                    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900  border-l border-blue-500"
+                    class="hidden lg:flex flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 border-l border-blue-500"
                     type="button"
                   >
                     All categories
@@ -124,7 +137,7 @@
                   </div>
                   <button
                     type="submit"
-                    class="p-2.5 text-sm font-medium text-white bg-[rgba(18,127,255,1)] rounded-r-lg hover:bg-blue-800 w-[150px]"
+                    class="hidden lg:block p-2.5 text-sm font-medium text-white bg-[rgba(18,127,255,1)] rounded-r-lg hover:bg-blue-800 w-[150px]"
                   >
                     <span class="">Search</span>
                   </button>
@@ -168,12 +181,10 @@
         </nav>
       </div>
     </div>
-    <div class="bg-white border-gray-200 border-b">
+    <div class="hidden bg-white border-gray-200 border-b lg:block">
       <div class="container mx-auto px-5">
         <nav class="py-3">
-          <div
-            class="flex flex-wrap justify-between items-center"
-          >
+          <div class="flex flex-wrap justify-between items-center">
             <div class="w-full md:block md:w-auto" id="navbar-dropdown">
               <ul class="flex items-center gap-6">
                 <li class="flex items-center gap-2 hover:text-blue-500">

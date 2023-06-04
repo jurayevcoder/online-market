@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto p-5">
     <div
-      class="mt-32 flex items-center justify-between gap-5 border border-[#DEE2E7] rounded-lg p-5 mb-5 bg-white"
+      class="hidden mt-32 lg:flex items-center justify-between gap-5 border border-[#DEE2E7] rounded-lg p-5 mb-5 bg-white"
     >
       <div class="flex flex-col items-start w-[30%]">
         <button
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div class="flex border border-[#DEE2E7] rounded-lg mb-5 bg-white">
+    <div class="hidden lg:flex border border-[#DEE2E7] rounded-lg mb-5 bg-white">
       <div class="px-5 py-6 w-[23%] border-r">
         <h1 class="text-[20px] text-[#1C1C1C] font-bold">Deals and offers</h1>
         <p class="text-[#8B96A5]">Hygiene equipments</p>
@@ -156,7 +156,7 @@
       </div>
     </div>
 
-    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5 bg-white">
+    <div class="hidden lg:flex border border-[#DEE2E7] rounded-lg w-[100%] mb-5 bg-white">
       <div
         class="w-[23%] pt-5 pl-5 bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/image92.png')]"
       >
@@ -180,7 +180,9 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ home.name }}</a>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]">{{
+              home.name
+            }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -201,7 +203,9 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ hom.name }}</a>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]">{{
+              hom.name
+            }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -214,7 +218,7 @@
       </div>
     </div>
 
-    <div class="border border-[#DEE2E7] rounded-lg flex w-[100%] mb-5 bg-white">
+    <div class="hidden lg:flex border border-[#DEE2E7] rounded-lg w-[100%] mb-5 bg-white">
       <div
         class="w-[23%] pt-5 pl-5 bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/image98.png')]"
       >
@@ -239,7 +243,9 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ elec.name }}</a>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]">{{
+              elec.name
+            }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -260,7 +266,9 @@
                 : 'flex flex-col w-[25%] py-4 px-6'
             "
           >
-            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]" >{{ elek.name }}</a>
+            <a href="#" class="hover:underline hover:text-[rgba(18,127,255,1)]">{{
+              elek.name
+            }}</a>
             <div class="flex items-center justify-between">
               <p class="text-[#8B96A5] text-[13px]">
                 From <br />
@@ -274,7 +282,7 @@
     </div>
 
     <div
-      class="rounded-lg flex w-[100%] bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/Group982.png')] p-10 justify-between mb-5"
+      class="hidden lg:flex rounded-lg w-[100%] bg-no-repeat bg-cover bg-center bg-[url('/store/img/img/Group982.png')] p-10 justify-between mb-5"
     >
       <div>
         <h3 class="text-[32px] text-white font-bold mb-5">
@@ -359,7 +367,7 @@
       </div>
     </div>
 
-    <div class="w-[100%]">
+    <div class="hidden lg:block w-[100%]">
       <h1 class="text-[24px] font-semibold mb-5">Recommended items</h1>
       <div class="w-[100%] flex flex-wrap gap-[1.5%]">
         <div
@@ -369,42 +377,246 @@
         >
           <img :src="item.img" alt="" class="w-[150.22px] h-[170.67px] mb-[20px]" />
           <div class="">
-            <h2 class="font-medium mb-[5px] ">{{ item.price }}</h2>
+            <h2 class="font-medium mb-[5px]">{{ item.price }}</h2>
             <p class="text-[#8B96A5] font-normal w-[186px]">{{ item.info }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="w-[100%] mb-5">
+    <div class="hidden lg:block w-[100%] mb-5">
       <h1 class="text-[24px] font-semibold mb-5">Our extra services</h1>
       <div class="w-[100%] flex gap-5">
-        <div v-for="ser in serviceLink" :key="ser.id" class="w-[25%] border rounded-lg relative bg-white">
-          <img :src="ser.img" alt="" class="w-full rounded-t-lg bg-[rgba(0,0,0,0.9)]">
+        <div
+          v-for="ser in serviceLink"
+          :key="ser.id"
+          class="w-[25%] border rounded-lg relative bg-white"
+        >
+          <img :src="ser.img" alt="" class="w-full rounded-t-lg bg-[rgba(0,0,0,0.9)]" />
           <p class="font-medium my-5 ml-5 w-[168px]">
             {{ ser.name }}
           </p>
-          <button class="absolute right-8 top-[100px] bg-[#D1E7FF] p-5 flex items-center justify-center rounded-full text-[25px] border-2 border-white">
+          <button
+            class="absolute right-8 top-[100px] bg-[#D1E7FF] p-5 flex items-center justify-center rounded-full text-[25px] border-2 border-white"
+          >
             <i :class="ser.icon"></i>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="w-[100%]">
+    <div class="hidden lg:block w-[100%]">
       <h1 class="text-[24px] font-semibold mb-5">Suppliers by region</h1>
       <div class="w-[100%] flex flex-wrap gap-4">
-          <div v-for="flag in flagLink" :key="flag.id" class="w-[18.9%] flex items-center gap-3">
-            <img :src="flag.img" alt="" class="w-[28px] h-[20px]">
-            <div>
-              <h2 class="font-normal">{{ flag.name }}</h2>
-              <p class="text-[13px] text-[#8B96A5] font-normal">{{ flag.info }}</p>
-            </div>
+        <div
+          v-for="flag in flagLink"
+          :key="flag.id"
+          class="w-[18.9%] flex items-center gap-3"
+        >
+          <img :src="flag.img" alt="" class="w-[28px] h-[20px]" />
+          <div>
+            <h2 class="font-normal">{{ flag.name }}</h2>
+            <p class="text-[13px] text-[#8B96A5] font-normal">{{ flag.info }}</p>
           </div>
+        </div>
       </div>
     </div>
+  </div>
 
+  <!-- Response -->
 
+  <div class="lg:hidden sm:mt-[105px] mt-20 mb-5">
+    <div class="container mx-auto px-5">
+      <div class="flex flex-wrap items-center gap-3 w-full">
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          All category
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Gadgets
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Clocthes
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Accessory
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Tablets
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Phones
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Phones
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="lg:hidden bg-no-repet bg-cover bg-center bg-[url('/store/img/img/Banner.jpg')] sm:py-20 py-5 sm:h-[400px] mb-5"
+  >
+    <div class="container mx-auto px-5">
+      <h1 class="font-normal sm:text-[32px] text-[18px]">Latest trending</h1>
+      <h2 class="text-[18px] sm:text-[32px] font-semibold mb-5">Electronic items</h2>
+      <button
+        class="text-[13px] text-[#0D6EFD] font-medium bg-white rounded-lg py-2 px-4 mb-12"
+      >
+        Learn more
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5 flex items-center justify-between mb-5">
+    <div class="">
+      <h2 class="text-[18px] font-semibold">Deals and offers</h2>
+      <p class="text-[13px] font-normal tex-[#505050]">Electronic equipments</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="flex flex-col items-center bg-[#EFF2F4] px-3 py-1">
+        <h3 class="text-[#8B96A5] font-semibold">13</h3>
+        <p class="text-[13px] text-[#8B96A5] font-normal">Hour</p>
+      </div>
+      <div class="flex flex-col items-center bg-[#EFF2F4] px-3 py-1">
+        <h3 class="text-[#8B96A5] font-semibold">34</h3>
+        <p class="text-[13px] text-[#8B96A5] font-normal">Min</p>
+      </div>
+      <div class="flex flex-col items-center bg-[#EFF2F4] px-3 py-1">
+        <h3 class="text-[#8B96A5] font-semibold">56</h3>
+        <p class="text-[13px] text-[#8B96A5] font-normal">Sec</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5 flex mb-5 items-center justify-between border py-5">
+    <button
+      @click="back"
+      :class="0 == sch ? 'text-gray-200 text-[50px]' : 'text-gray-400 text-[50px]'"
+    >
+      <i class="bx bxs-chevron-left-circle"></i>
+    </button>
+    <div class="w-full flex items-center justify-center">
+      <div class="flex items-center w-[80%] gap-5">
+        <div
+          class="flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+        >
+          <div class="h-[120px]">
+            <img :src="offerLink[sch].img" alt="" />
+          </div>
+          <div class="flex flex-col items-center gap-2 mt-5">
+            <a
+              href="#"
+              class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+              >{{ offerLink[sch].name }}</a
+            >
+            <p
+              class="text-[#EB001B] text-[14px] rounded-full py-1 px-4 flex justify-center bg-[#FFE3E3]"
+            >
+              {{ offerLink[sch].chegirma }}
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+        >
+          <div class="h-[120px]">
+            <img :src="offerLink[sch + 1].img" alt="" class="" />
+          </div>
+          <div class="flex flex-col items-center gap-2 mt-5">
+            <a
+              href="#"
+              class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+              >{{ offerLink[sch + 1].name }}</a
+            >
+            <p
+              class="text-[#EB001B] text-[14px] rounded-full py-1 px-4 flex justify-center bg-[#FFE3E3]"
+            >
+              {{ offerLink[sch + 1].chegirma }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      @click="next"
+      :class="
+        offerLink.length - 2 == sch
+          ? 'text-gray-200 text-[50px]'
+          : 'text-gray-400 text-[50px]'
+      "
+    >
+      <i class="bx bxs-chevron-right-circle"></i>
+    </button>
+  </div>
+
+  <div class="lg:hidden">
+   <div class="container mx-auto px-5 mb-5">
+    <h1 class="text-[18px] font-semibold">Home and outdoor</h1>
+   </div>
+    <div class="container mx-auto px-5 flex mb-5 items-center justify-between border py-5">
+      <button
+        @click="backHome"
+        :class="0 == id ? 'text-gray-200 text-[50px]' : 'text-gray-400 text-[50px]'"
+      >
+        <i class="bx bxs-chevron-left-circle"></i>
+      </button>
+
+      <div class="w-full flex items-center justify-center">
+        <div class="flex items-center w-[80%] gap-5">
+          <div
+            class="flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+          >
+            <div class="h-[120px]">
+              <img :src="homeLink[id].img" alt="" class="w-28 h-28"/>
+            </div>
+            <div class="flex flex-col items-center gap-2 mt-5">
+              <a
+                href="#"
+                class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+                >{{ homeLink[id].name }}</a
+              >
+              <p
+                class="text-[#8B96A5] text-[13px] font-normal"
+              >
+                {{ homeLink[id].price }}
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full"
+          >
+            <div class="h-[120px]">
+              <img :src="homeLink[id + 1].img" alt="" class="w-28 h-28" />
+            </div>
+            <div class="flex flex-col items-center gap-2 mt-5">
+              <a
+                href="#"
+                class="text-[#1C1C1C] hover:underline hover:text-[rgba(18,127,255,1)]"
+                >{{ homeLink[id + 1].name }}</a
+              >
+              <p
+                class="text-[#8B96A5] text-[13px] font-normal"
+              >
+                {{ homeLink[id + 1].price }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        @click="nextHome"
+        :class="
+          homeLink.length - 2 == id
+            ? 'text-gray-200 text-[50px]'
+            : 'text-gray-400 text-[50px]'
+        "
+      >
+        <i class="bx bxs-chevron-right-circle"></i>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -418,8 +630,42 @@ import { elecLinks_2 } from "~/store/info/electironic-2";
 import { recItemsLinks } from "~/store/info/rec-items";
 import { serviceLinks } from "~/store/info/services";
 import { flagLinks } from "~/store/info/flag";
+import {homeLinks} from "~/store/info/home"
 
 const offerLink = ref(offerLinks);
+const sch = ref(0);
+const next = () => {
+  if (sch.value == offerLink.value.length - 1) {
+    sch.value = sch.value;
+  } else {
+    sch.value = sch.value + 1;
+  }
+};
+const back = () => {
+  if (sch.value == 0) {
+    sch.value = sch.value;
+  } else {
+    sch.value = sch.value - 1;
+  }
+};
+
+const id = ref(0);
+const nextHome = () => {
+  if (id.value == homeLink.value.length - 1) {
+    id.value = id.value;
+  } else {
+    id.value = id.value + 1;
+  }
+};
+const backHome = () => {
+  if (id.value == 0) {
+    id.value = id.value;
+  } else {
+    id.value = id.value - 1;
+  }
+};
+
+const homeLink = ref(homeLinks)
 
 const homeLink_1 = ref(homeLinks_1);
 const homeLink_2 = ref(homeLinks_2);
@@ -440,7 +686,7 @@ const toggleModal = () => (modal.value = !modal.value);
 <style lang="scss">
 body {
   font-family: "Inter", sans-serif;
-  background-color: #F7FAFC;
+  background-color: #f7fafc;
   // font-family: "Roboto", sans-serif;
 }
 </style>

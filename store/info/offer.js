@@ -2,7 +2,7 @@ import image_35 from '../img/buyum/image 35.png'
 import image_34 from '../img/buyum/image 34.png'
 import image_28 from '../img/buyum/image 28.png'
 import image_29 from '../img/buyum/image 29.png'
-import image_23 from '../img/buyum/image 23.png'
+import image_23 from '../img/buyum/image23.png'
 
 export const offerLinks = [
     {
