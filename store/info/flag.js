@@ -1,6 +1,6 @@
 import arab from "../img/flag/Property 1=AE.png"
 import aus from "../img/flag/Property 1=AU.png"
-import usa from "../img/flag/Property 1=US.png"
+import usa from "../img/flag/Property1=US.png"
 import rus from "../img/flag/Property 1=RU.png"
 import ital from "../img/flag/Property 1=IT.png"
 import den from "../img/flag/Property 1=DK.png"
