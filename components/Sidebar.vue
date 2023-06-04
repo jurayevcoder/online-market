@@ -1,6 +1,6 @@
 <template>
-  <aside class="mt-5">
-      <div class="w-[20%]">
+  <aside>
+      <div class="">
         <ul class="mb-5">
           <li>
             <button
@@ -99,7 +99,7 @@
                   <input type="checkbox" class="w-5 h-5" checked="true">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Samsung</span
                 >
                 </div>
@@ -110,7 +110,7 @@
                   <input type="checkbox" class="w-5 h-5" checked="true">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Apple</span
                 >
                 </div>
@@ -121,7 +121,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Huawei</span
                 >
                 </div>
@@ -132,7 +132,7 @@
                   <input type="checkbox" class="w-5 h-5" checked="true">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Pocco</span
                 >
                 </div>
@@ -143,7 +143,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Lenovo</span
                 >
                 </div>
@@ -192,7 +192,7 @@
                   <input type="checkbox" class="w-5 h-5" checked="true">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Metallic</span
                 >
                 </div>
@@ -203,7 +203,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Plastic cover</span
                 >
                 </div>
@@ -214,7 +214,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >8GB Ram</span
                 >
                 </div>
@@ -225,7 +225,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Super power</span
                 >
                 </div>
@@ -236,7 +236,7 @@
                   <input type="checkbox" class="w-5 h-5">
                   <span
                   href="#"
-                  class="flex items-center w-full py-2 text-[#1C1C1C] hover:text-[#0D6EFD]"
+                  class="flex items-center w-full py-2 text-[#1C1C1C]"
                   >Large Memory</span
                 >
                 </div>
