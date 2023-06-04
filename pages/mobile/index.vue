@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-5">
-    <div class="mt-32">
+    <div class="hidden lg:block mt-32">
       <nav class="flex mb-5" aria-label="Breadcrumb">
         <ol class="inline-flex items-center">
           <li class="inline-flex items-center">
@@ -155,32 +155,32 @@
 
           <div class="flex items-center gap-5 mb-5">
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               Samsung <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               Apple <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               Poco <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               Metallic <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               4 star <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
             <button
-              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050]"
+              class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
             >
               3 star <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
             </button>
@@ -341,13 +341,167 @@
       </div>
     </div>
   </div>
+
+  <!-- Response -->
+
+  <div class="lg:hidden sm:mt-[105px] mt-20 border-b pb-5">
+    <div class="container mx-auto px-5">
+      <div class="flex flex-wrap items-center gap-3 w-full">
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Tablets
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Phones
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Ipads
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Samsung
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Jackaets
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Phones
+        </button>
+        <button class="text-[#0D6EFD] font-normal bg-[#EFF2F4] py-1.5 px-2 rounded-lg">
+          Ipads
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5 py-3 flex items-center justify-between">
+    <button class="border px-2 py-2 rounded-lg flex items-center gap-3">
+      <span>Sort: Newest</span> <i class="bx bx-menu-alt-left text-[20px]"></i>
+    </button>
+    <button class="border px-2 py-2 rounded-lg flex items-center gap-3">
+      <span>Filter (3)</span> <i class="bx bx-filter-alt text-[20px]"></i>
+    </button>
+    <div class="border rounded-lg flex items-center">
+      <button class="bg-[#EFF2F4] text-[20px] p-2 flex items-center">
+        <i class="bx bxs-grid-alt"></i>
+      </button>
+      <button class="text-[20px] p-2">
+        <i class="bx bx-menu flex items-center"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden border-t">
+    <dir class="container mx-auto px-5 flex flex-wrap items-center gap-5 mb-5">
+      <button
+        class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
+      >
+        Huawei <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
+      </button>
+      <button
+        class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
+      >
+        Apple <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
+      </button>
+      <button
+        class="border border-[rgba(13,110,253,1)] rounded-lg px-2 flex items-center gap-2 text-[#505050] bg-white"
+      >
+        64GB <i class="bx bx-x text-[30px] text-[#8B96A5]"></i>
+      </button>
+    </dir>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5 flex flex-col gap-3 mb-5">
+    <div
+      v-for="res in resMobLink"
+      :key="res.id"
+      class="flex items-center border rounded-lg p-5 gap-3 bg-white"
+    >
+      <img :src="res.img" alt="" class="w-[87.55px] h-[87.55px]" />
+      <div>
+        <h2 class="text-[#505050] font-normal">Regular Fit Resort Shirt</h2>
+        <h3 class="text-[#333333] font-semibold">$57.70</h3>
+        <div class="flex items-center gap-5 mt-2">
+          <img src="../../store/img/mobile/rating.png" alt="" />
+          <p class="text-[#8B96A5] text-[13px] font-normal">154 orders</p>
+        </div>
+        <p class="text-[#00B517] text-[13px] font-normal">Free Shipping</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:hidden container mx-auto px-5">
+    <h2 class="tex-[18px] font-semibold">You may also like</h2>
+  </div>
+
+  <div
+    class="lg:hidden container mx-auto px-5 flex mb-5 items-center justify-between py-5"
+  >
+    <button
+      @click="back"
+      :class="0 == sch ? 'text-gray-200 text-[40px]' : 'text-gray-400 text-[40px]'"
+    >
+      <i class="bx bxs-chevron-left-circle"></i>
+    </button>
+
+    <div class="w-full flex items-center justify-center">
+      <div class="flex items-center w-[80%] gap-5">
+        <div
+          class="flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
+        >
+          <div class="h-[120px]">
+            <img :src="recItemsLink[sch].img" alt="" class="w-[112.27px] h-[113.21px]" />
+          </div>
+          <div class="flex flex-col items-center gap-2 mt-5">
+            <div class="">
+              <h2 class="font-medium text-[16px] mb-1">{{ recItemsLink[sch].price }}</h2>
+              <p class="text-[#8B96A5] text-[13px] font-normal w-[150px]">
+                {{ recItemsLink[sch].info }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hidden sm:flex flex-col justify-center items-center border rounded-lg py-6 w-full bg-white"
+        >
+          <div class="h-[120px]">
+            <img :src="recItemsLink[sch + 1].img" alt="" class="w-[112.27px] h-[113.21px]" />
+          </div>
+          <div class="flex flex-col items-center gap-2 mt-5">
+            <div class="">
+              <h2 class="font-medium text-[16px] mb-1">
+                {{ recItemsLink[sch + 1].price }}
+              </h2>
+              <p class="text-[#8B96A5] text-[13px] font-normal w-[150px]">
+                {{ recItemsLink[sch + 1].info }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      @click="next"
+      :class="
+        recItemsLink.length - 2 == sch
+          ? 'text-gray-200 text-[40px]'
+          : 'text-gray-400 text-[40px]'
+      "
+    >
+      <i class="bx bxs-chevron-right-circle"></i>
+    </button>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { mobileLinks } from "../../store/info/mobile";
+import { resMobLinks } from "../../store/info/res-mobile";
+import { recItemsLinks } from "~/store/info/rec-items";
 
+const resMobLink = ref(resMobLinks);
 const mobileLink = ref(mobileLinks);
+const recItemsLink = ref(recItemsLinks);
 
 const menu = ref(false);
 const toggleMenu = () => (menu.value = !menu.value);
@@ -355,10 +509,25 @@ const toggleMenu = () => (menu.value = !menu.value);
 const show = ref(false);
 const toggleShow = () => (show.value = !show.value);
 
+const sch = ref(0);
+const next = () => {
+  if (sch.value == recItemsLink.value.length - 1) {
+    sch.value = sch.value;
+  } else {
+    sch.value = sch.value + 1;
+  }
+};
+const back = () => {
+  if (sch.value == 0) {
+    sch.value = sch.value;
+  } else {
+    sch.value = sch.value - 1;
+  }
+};
 </script>
 
 <style lang="scss">
-  body {
-    background-color: #F7FAFC;
-  }
+body {
+  background-color: #f7fafc;
+}
 </style>
