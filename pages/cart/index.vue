@@ -275,7 +275,7 @@
           </div>
         </div>
 
-        <div class="border rounded-lg p-5 bg-white">
+        <div class="border rounded-lg p-5 bg-white shadow-lg">
           <div class="flex items-center justify-between border-b pb-5">
             <div class="flex flex-col gap-1">
               <p class="text-[#505050] font-normal">Subtotal:</p>
@@ -311,7 +311,7 @@
       </div>
     </div>
 
-    <div class="w-[75%] flex items-center gap-10 mb-5">
+    <div class="w-[75%] flex items-center gap-10 mb-8">
       <div class="w-[28%] flex items-center gap-3">
         <i class='bx bxs-lock-alt bg-[#DEE2E7] p-4 rounded-full text-[25px] text-[#8B96A5]'></i>
         <div >
@@ -336,9 +336,30 @@
         </div>
       </div>
     </div>
+
+    <div class="w-full p-5 border rounded-lg bg-white mb-5">
+      <h2 class="text-[20px] font-semibold mb-5">Saved for later</h2>
+        <div class="flex gap-5">
+          <div v-for="cart in cartLink" :key="cart.id" class="w-[25%]">
+          <div class="flex items-center justify-center py-12 bg-[#EEEEEE] rounded-lg mb-2 ">
+            <img :src="cart.img" alt="" class="w-[194px] h-[200px]">
+          </div>
+          <div>
+            <h3 class="text-[18px] font-semibold mb-3">{{ cart.price }}</h3>
+            <p class="text-[#606060] font-normal w-[215.8px] mb-4">{{ cart.name }}</p>
+            <button class="text-[#0D6EFD] flex items-center gap-3 border p-2 rounded-lg hover:border-[#0D6EFD]"> <i class='bx bx-cart text-[25px]'></i>Move to cart</button>
+          </div>
+        </div>
+        </div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import {ref} from "vue"
+import { cartLinks } from "~/store/info/cart";
+
+const cartLink = ref(cartLinks);
+</script>
 
 <style lang="scss" scoped></style>
