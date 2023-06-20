@@ -342,7 +342,7 @@
         <div class="flex gap-5">
           <div v-for="cart in cartLink" :key="cart.id" class="w-[25%]">
           <div class="flex items-center justify-center py-12 bg-[#EEEEEE] rounded-lg mb-2 ">
-            <img :src="cart.img" alt="" class="w-[194px] h-[200px]">
+            <img :src="cart.img" alt="" class="w-[194px] h-[200px] bg-transparent">
           </div>
           <div>
             <h3 class="text-[18px] font-semibold mb-3">{{ cart.price }}</h3>
