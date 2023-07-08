@@ -1,8 +1,8 @@
 <template>
   <div class="container mx-auto px-5 mt-36">
     <h1 class="text-[24px] font-semibold mb-5">My cart (3)</h1>
-    <div class="w-full flex gap-5 mb-5">
-      <div class="border rounded-lg bg-white p-5 w-[75%]">
+    <div class="w-full flex flex-col lg:flex-row gap-5 mb-5">
+      <div class="border rounded-lg bg-white p-5 w-full lg:w-[75%]">
         <div class="border-b flex justify-between">
           <div class="flex gap-4">
             <div
@@ -260,7 +260,7 @@
         </div>
       </div>
 
-      <div class="w-[25%]">
+      <div class="w-full lg:w-[25%]">
         <div class="border rounded-lg p-5 bg-white mb-5">
           <p class="text-[#505050] font-normal mb-5">Have a coupon?</p>
           <div class="flex border rounded-lg w-full">
@@ -311,8 +311,8 @@
       </div>
     </div>
 
-    <div class="w-[75%] flex items-center gap-10 mb-8">
-      <div class="w-[28%] flex items-center gap-3">
+    <div class="w-full lg:w-[75%] flex flex-wrap items-center gap-10 mb-8">
+      <div class="w-full sm:w-[45%] lg:w-[28%] flex items-center gap-3">
         <i class='bx bxs-lock-alt bg-[#DEE2E7] p-4 rounded-full text-[25px] text-[#8B96A5]'></i>
         <div >
           <p class="font-normal">Secure payment</p>
@@ -320,7 +320,7 @@
         </div>
       </div>
 
-      <div class="w-[28%] flex items-center gap-3">
+      <div class="w-full sm:w-[45%] lg:w-[28%] flex items-center gap-3">
         <i class='bx bxs-message-detail bg-[#DEE2E7] p-4 rounded-full text-[25px] text-[#8B96A5]'></i>
         <div>
           <p class="font-normal">Customer support</p>
@@ -328,7 +328,7 @@
         </div>
       </div>
 
-      <div class="w-[28%] flex items-center gap-3">
+      <div class="w-full sm:w-[45%] lg:w-[28%] flex items-center gap-3">
         <i class='bx bxs-truck bg-[#DEE2E7] p-4 rounded-full text-[25px] text-[#8B96A5]'></i>
         <div>
           <p class="font-normal">Free delivery</p>
@@ -339,9 +339,9 @@
 
     <div class="w-full p-5 border rounded-lg bg-white mb-5">
       <h2 class="text-[20px] font-semibold mb-5">Saved for later</h2>
-        <div class="flex gap-5">
-          <div v-for="cart in cartLink" :key="cart.id" class="w-[25%]">
-          <div class="flex items-center justify-center py-12 bg-[#EEEEEE] rounded-lg mb-2 ">
+        <div class="flex flex-col lg:flex-row gap-5">
+          <div v-for="cart in cartLink" :key="cart.id" class="w-full lg:w-[25%] border rounded-lg p-5">
+          <div class="flex items-center justify-center py-12 bg-white rounded-lg mb-2 ">
             <img :src="cart.img" alt="" class="w-[194px] h-[200px] bg-transparent">
           </div>
           <div>

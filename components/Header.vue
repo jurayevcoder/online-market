@@ -209,12 +209,13 @@
                   <i class="bx bxs-message-detail text-[25px]"></i>
                   <a href="#" class="block">Message</a>
                 </li>
-                <li
+                <NuxtLink
+                  to="/mobile"
                   class="flex flex-col justify-center items-center text-[#8B96A5] hover:text-blue-500"
                 >
                   <i class="bx bxs-heart text-[25px]"></i>
                   <a href="#" class="block">Orders</a>
-                </li>
+                </NuxtLink>
                 <NuxtLink
                   to="/cart"
                   class="flex flex-col justify-center items-center text-[#8B96A5] hover:text-blue-500"
